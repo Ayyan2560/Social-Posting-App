@@ -31,4 +31,5 @@ document.querySelector('form').addEventListener("submit", (e) => {
     all_user.push(new_user);
     localStorage.setItem("users", JSON.stringify(all_user));
     alert("Signup successful!");
+       window.location.href = "../login/index.html";
 });
