@@ -36,6 +36,9 @@ document.querySelector("#loginForm").addEventListener("submit", async (e) => {
 
     if (user) {
         alert("Login successful! Welcome back.");
+
+        localStorage.setItem("currentUser", JSON.stringify(user));
+
         window.location.href = "../posts/index.html";
     } else {
         errorDiv.textContent = "Invalid email or password.";

@@ -1,0 +1,166 @@
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --danger: #ef4444;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--border);
+}
+
+.user-mail {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+#logout {
+    background: transparent;
+    border: 1px solid var(--danger);
+    color: var(--danger);
+    padding: 6px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#logout:hover {
+    background: var(--danger);
+    color: white;
+}
+
+/* Form Styling */
+form {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary);
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: var(--primary-hover);
+}
+
+/* Posts Output */
+.output {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.single-post {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.single-post h2 {
+    margin: 0 0 5px 0;
+    font-size: 1.4rem;
+}
+
+.single-post h4 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.single-post p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.single-post h5 {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-bottom: 15px;
+}
+
+/* Post Buttons */
+.post-btns {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+}
+
+.post-btns button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: #f1f5f9;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.post-btns button:hover {
+    background: #e2e8f0;
+}
